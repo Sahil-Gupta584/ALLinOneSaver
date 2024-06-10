@@ -241,6 +241,29 @@ input[type=radio][aria-label='Facebook']:checked {
 }
 
 input[type='radio'][aria-label='Facebook']:checked ~ .fb {
-    background: linear-gradient(to right, #159393, #417bd9);
+    background: linear-gradient(to right, #76a2e9, #0866ff);
     transition: background 10s ease-in-out;
+}
+
+/* Twitter */
+
+.Twitter {
+    color: #000000;
+}
+
+input[type=radio][aria-label='Twitter']:checked {
+    background: linear-gradient(to right, #000000, #5e5858);
+    color: whitesmoke;
+    border-inline-start-color: #5e5858;
+    border-inline-end-color: #5e5858;
+    border-top-color: #5e5858;
+}
+
+input[type='radio'][aria-label='Twitter']:checked ~ .twitter  {
+    background: linear-gradient(to right, #000000, #5e5858);
+    transition: background 10s ease-in-out;
+}
+
+input[type='radio'][aria-label='Twitter']:checked ~ .twitter input:focus{
+    outline-color: navajowhite;
 }

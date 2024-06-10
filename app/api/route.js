@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server';
 import axios from 'axios';
 import ytdl from 'ytdl-core';
 import getFbVideoInfo from "fb-downloader-scrapper";
+import getTwitterMedia from 'get-twitter-media';
+import {alldown} from 'nayan-media-downloader'
+
 
 async function instagram(videolink) {
     console.log('running instagram');
@@ -56,20 +59,50 @@ async function facebook(videolink) {
         const getInfo = await getFbVideoInfo(videolink); // Corrected this line
         console.log('getInfo:', getInfo);
 
-        const videoUrl =  getInfo.sd;
+        const videoUrl = getInfo.sd;
 
         if (!videoUrl) {
             throw new Error('Failed to retrieve video');
         }
 
-        
-        return {downloadUrl: getInfo.sd};
+
+        return { downloadUrl: getInfo.sd };
 
     } catch (error) {
         console.log(error.message, error, 'from facebook function');
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 }
+
+// async function twitter(videolink) {
+//     videolink = videolink.replace('x.com','twitter.com');
+//     console.log('in twitter')
+//     try {
+//         let media = await getTwitterMedia(videolink, {
+//             text: true,
+//         });
+//         console.log(media);
+//         let downloadUrl = media.media[0].url
+//         console.log(downloadUrl);
+//         return { downloadUrl};
+
+//     } catch (error) {
+//         console.log(error.message, error, 'from twitter');
+//         return NextResponse.json({ error: error.message }, { status: 500 });    }
+// }
+
+async function twitter(videolink) {
+    videolink = videolink.replace('x.com','twitter.com');
+    console.log('in twitter')
+    try {
+        const res = alldown(videolink);
+        return { downloadUrl :res.media.low};
+
+    } catch (error) {
+        console.log(error.message, error, 'from twitter');
+        return NextResponse.json({ error: error.message }, { status: 500 });    }
+}
+
 
 export async function POST(request) {
     try {
@@ -95,12 +128,16 @@ export async function POST(request) {
             console.log('fb domain matched');
             console.log(inputUrl);
             console.time('fb');
-            const {downloadUrl :url} = await facebook(inputUrl);
+            const { downloadUrl: url } = await facebook(inputUrl);
             console.timeEnd('fb');
             downloadUrl = url;
-
-
-           
+        } else if (domain.includes('x.com')) {
+            console.log('x domain matched');
+            console.log(inputUrl);
+            console.time('x');
+            const { downloadUrl: url } = await twitter(inputUrl);
+            console.timeEnd('x');
+            downloadUrl = url;
         }
 
         return NextResponse.json({ url: downloadUrl });
