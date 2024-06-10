@@ -2,9 +2,7 @@ import { NextResponse } from 'next/server';
 import axios from 'axios';
 import ytdl from 'ytdl-core';
 import getFbVideoInfo from "fb-downloader-scrapper";
-import getTwitterMedia from 'get-twitter-media';
-import {alldown} from 'nayan-media-downloader'
-
+import getTwitterMedia  from 'get-twitter-media';
 
 async function instagram(videolink) {
     console.log('running instagram');
@@ -74,35 +72,19 @@ async function facebook(videolink) {
     }
 }
 
-// async function twitter(videolink) {
-//     videolink = videolink.replace('x.com','twitter.com');
-//     console.log('in twitter')
-//     try {
-//         let media = await getTwitterMedia(videolink, {
-//             text: true,
-//         });
-//         console.log(media);
-//         let downloadUrl = media.media[0].url
-//         console.log(downloadUrl);
-//         return { downloadUrl};
-
-//     } catch (error) {
-//         console.log(error.message, error, 'from twitter');
-//         return NextResponse.json({ error: error.message }, { status: 500 });    }
-// }
-
 async function twitter(videolink) {
-    videolink = videolink.replace('x.com','twitter.com');
-    console.log('in twitter')
     try {
-        const res = alldown(videolink);
-        return { downloadUrl :res.media.low};
+        let res  = await getTwitterMedia(videolink, {
+            text: true,
+        });
+        console.log(res);
+        return NextResponse.json({downloadUrl : res.media[0].url})
 
     } catch (error) {
-        console.log(error.message, error, 'from twitter');
-        return NextResponse.json({ error: error.message }, { status: 500 });    }
+        console.log(error.message, error, '10');
+        return NextResponse.json({ error: error.message }, { status: 500 });
+    }
 }
-
 
 export async function POST(request) {
     try {
@@ -139,9 +121,7 @@ export async function POST(request) {
             console.timeEnd('x');
             downloadUrl = url;
         }
-
         return NextResponse.json({ url: downloadUrl });
-
     } catch (error) {
         console.log(error.message, error, '10');
         return NextResponse.json({ error: error.message }, { status: 500 });
