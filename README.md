@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<br />
+<div align="center">
 
-## Getting Started
+   <h3 align="center">ALLinOneSaver: Download Instagram, Youtube, Twitter videos, photos and stories </h3>
+<div align="center">
 
-First, run the development server:
 
-```bash
+  <p align="center">Effortlessly download videos, photos, and stories from YouTube, Instagram, Facebook, and Twitter. Enjoy fast, easy, and reliable media downloads from your favorite social media platforms.
+</p>
+</div>
+    <a href="https:/ALLinOneSaver-seven.vercel.app/"><strong>View Demo »</strong></a>
+    <br />
+    <br />
+  </p>
+</div>
+
+## Project Status[![](https://raw.githubusercontent.com/aregtech/areg-sdk/master/docs/img/pin.svg)](#project-status)
+<table class="no-border">
+<tr>
+    <td><img src="https://badgen.net/github/stars/Sahil-Gupta584/ALLinOneSaver" alt="Total Stars"/></td>
+    <td><img src="https://badgen.net/github/forks/Sahil-Gupta584/ALLinOneSaver" alt="Total Forks"/></td>
+    <td><img src="https://img.shields.io/github/search/Sahil-Gupta584/ALLinOneSaver/download" alt="Download Count"/></td>
+	<td><img src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fpdf-verse.vercel.app%2F" alt="Online status"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://img.shields.io/tokei/lines/github/Sahil-Gupta584/ALLinOneSaver" alt="total lines"/></td>
+    <td><img src="https://img.shields.io/github/languages/code-size/Sahil-Gupta584/ALLinOneSaver?style=flat-square" alt="code size"/></td>
+    <td><img src="https://img.shields.io/github/repo-size/Sahil-Gupta584/ALLinOneSaver" alt="repo size"/></td>
+        <td><img src="https://img.shields.io/github/languages/top/Sahil-Gupta584/ALLinOneSaver" alt="top language"/></td>
+  </tr>
+  <tr>
+      <td><img src="https://img.shields.io/github/last-commit/Sahil-Gupta584/ALLinOneSaver" alt="Last commit"/></td>
+    <td><img src="https://img.shields.io/github/issues/Sahil-Gupta584/ALLinOneSaver" alt="total issues"/></td>
+    <td><img src="https://img.shields.io/github/issues-pr/Sahil-Gupta584/ALLinOneSaver" alt="issues"/></td>
+  </tr>
+</table>
+<br />
+
+
+
+## Introduction 
+
+ALLinOneSaver is an intuitive, powerful and fully responsive web app that provides downloader tools for downloading social media videos, photos ans stories.  Try ALLinOneSaver today and see how it can improve your experience.
+
+
+
+### Installation 🔭
+
+All installation steps go here.
+
+* First Download the Repository from Github or Clone the Repo
+
+```sh
+git clone https://github./Sahil-Gupta584/ALLinOneSaver.git
+```
+* Open the Project Folder in Your code Editor and open the terminal and run following command
+
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+* Now You will see following text in Your terminal and if not then debug your code or contact me
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```sh
+Server is running on port 3000
+```
 
-## Learn More
+* Open Your browser and navigate to this link
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+http://localhost:3000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Contact info
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Feel free to contact me if you come through any error or want Guide of how to learn Full stack Development. You can also contact me if you want to Hire me for Your Project or organization.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<a href ="https://www.linkedin.com/in/sahil-gupta-1b7742286/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin"/>
+
+## Like my work? 💖
+
+This project needs a ⭐️ from you. Don't forget to leave a star ⭐️. It is the only motivation for me to code awesome internet tools and stuff. If you found ALLinOneSaver helpful consider supporting me with a Follow.
