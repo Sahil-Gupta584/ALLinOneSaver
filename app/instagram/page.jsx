@@ -1,6 +1,6 @@
 import MainPage from "../components/mainPage";
 
-export default function Home(params) {
+export default function Instagram(params) {
 
    return (
     <>
