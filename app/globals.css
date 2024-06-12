@@ -9,7 +9,13 @@
 .min-h-screen {
     min-height: 42vh;
 }
+.nav-btn{
+    width: initial;
 
+}
+.navbar-end{
+    font-size: 0.5rem;
+}
 
 .hero h1 {
     font-family: "Reddit Mono", 'monospace';
@@ -171,7 +177,9 @@ input[type='radio'][aria-label='Twitter']:checked~.twitter {
     border-radius: 15px !important;
 }
 
-
+.tab{
+    --tab-border-color: initial;
+}
 
 
 /* Instagram */
@@ -221,7 +229,7 @@ input[type=radio][aria-label='YouTube']:checked {
     border-top-color: #ff0090;
 }
 
-input[type='radio'][aria-label='YouTube']:checked ~ .yt {
+input[type='radio'][aria-label='YouTube']:checked~.yt {
     background: linear-gradient(to right, #ff46af, #d40303);
     transition: background 10s ease-in-out;
 }
@@ -240,7 +248,7 @@ input[type=radio][aria-label='Facebook']:checked {
     border-top-color: #0866ff;
 }
 
-input[type='radio'][aria-label='Facebook']:checked ~ .fb {
+input[type='radio'][aria-label='Facebook']:checked~.fb {
     background: linear-gradient(to right, #76a2e9, #0866ff);
     transition: background 10s ease-in-out;
 }
@@ -259,11 +267,11 @@ input[type=radio][aria-label='Twitter']:checked {
     border-top-color: #5e5858;
 }
 
-input[type='radio'][aria-label='Twitter']:checked ~ .twitter  {
+input[type='radio'][aria-label='Twitter']:checked~.twitter {
     background: linear-gradient(to right, #000000, #5e5858);
-    transition: background 10s ease-in-out;
+    color: navajowhite;
 }
 
-input[type='radio'][aria-label='Twitter']:checked ~ .twitter input:focus{
+input[type='radio'][aria-label='Twitter']:checked~.twitter input:focus {
     outline-color: navajowhite;
 }

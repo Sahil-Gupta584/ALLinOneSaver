@@ -1,35 +1,19 @@
 import { NextResponse } from 'next/server';
-import axios from 'axios';
 import ytdl from 'ytdl-core';
 import getFbVideoInfo from "fb-downloader-scrapper";
-import getTwitterMedia  from 'get-twitter-media';
+import getTwitterMedia from 'get-twitter-media';
+import instagramDl from "@sasmeee/igdl";
+
+
+
+
 
 async function instagram(videolink) {
     console.log('running instagram');
     try {
-        let shortcode = videolink.split("reel/")[1].split(" ")[0].slice(0, 11);
-        console.log(shortcode);
-
-        const options = {
-            method: 'GET',
-            url: 'https://instagram-bulk-profile-scrapper.p.rapidapi.com/clients/api/ig/media_by_id',
-            params: {
-                shortcode: shortcode,
-                response_type: 'reels'
-            },
-            headers: {
-                'x-rapidapi-key': 'your_rapidapi_key', // Replace with your actual RapidAPI key
-                'x-rapidapi-host': 'instagram-bulk-profile-scrapper.p.rapidapi.com'
-            }
-        };
-
-        const response = await axios.request(options);
-        console.log(response.data);
-
-        const downloadUrl = response.data[0].items[0].video_versions[0].url;
-        console.log(downloadUrl, '27');
-
-        return { downloadUrl };
+        const dataList = await instagramDl(videolink);
+        console.log(dataList);
+        return { downloadUrl: dataList[0].download_link };
 
     } catch (error) {
         console.log(error.message, error, '31');
@@ -72,16 +56,22 @@ async function facebook(videolink) {
     }
 }
 
+
+
+
 async function twitter(videolink) {
+    const url = videolink.replace('x.com', 'twitter.com');
+    console.log('in twitter')
+    console.log(url);
     try {
-        let res  = await getTwitterMedia(videolink, {
+        let res = await getTwitterMedia(url, {
             text: true,
         });
         console.log(res);
-        return NextResponse.json({downloadUrl : res.media[0].url})
+        return { downloadUrl: res.media[0].url };
 
     } catch (error) {
-        console.log(error.message, error, '10');
+        console.log(error.message, error, 'from twitter');
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 }

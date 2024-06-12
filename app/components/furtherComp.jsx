@@ -4,7 +4,7 @@ const FurtherComp = () => {
     return (
         <>
             <section className="features my-10">
-                <h2 className="faq text-3xl font-bold ">Features</h2>
+                <h2 className="faq text-3xl font-bold " id="features">Features</h2>
                 <ol>
                     <li>Download high-quality Instagram Reels and Stories</li>
                     <li>Fast and reliable service</li>
@@ -13,9 +13,7 @@ const FurtherComp = () => {
                 </ol>
             </section>
 
-            
             <FAQ />
-            
 
             <section className="how-it-works my-10">
                 <h2 className="text-3xl font-bold">How It Works</h2>
