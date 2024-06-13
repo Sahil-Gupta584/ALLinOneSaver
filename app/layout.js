@@ -12,6 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="cupcake">
+    <head>
+    <meta name="ahrefs-site-verification" content="e38dd3d92f40ea5464663c70811c2198df478078cc9504e2ea3af1f04d78785d">
+    </head>
       <body className={inter.className}>
         <Navbar />
         {children}
