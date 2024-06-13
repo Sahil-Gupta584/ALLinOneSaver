@@ -362,3 +362,17 @@ input[type='radio'][aria-label='Twitter']:checked~.twitter input:focus {
       transform: rotate( 360deg );
     }
   }
+
+  /* Resposiveness */
+
+  @media (width < 706px){
+    .navbar-end{
+        display: none;
+    }
+
+    .tab:is(input[type="radio"]):after {
+        --tw-content: attr(aria-label);
+        font-size: 3.2vw;
+        content: var(--tw-content);
+    }
+  }
