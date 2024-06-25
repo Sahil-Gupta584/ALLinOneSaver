@@ -8,7 +8,7 @@
   <p align="center">Effortlessly download videos, photos, and stories from YouTube, Instagram, Facebook, and Twitter. Enjoy fast, easy, and reliable media downloads from your favorite social media platforms.
 </p>
 </div>
-    <a href="https:/ALLinOneSaver-seven.vercel.app/"><strong>View Demo »</strong></a>
+    <a href="https://ALLinOneSaver-seven.vercel.app/"><strong>View Demo »</strong></a>
     <br />
     <br />
   </p>
