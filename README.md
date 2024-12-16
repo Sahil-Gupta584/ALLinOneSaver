@@ -5,7 +5,7 @@
 <div align="center">
 
 
-  <p align="center">Effortlessly download videos, photos, and stories from YouTube, Instagram, Facebook, and Twitter. Enjoy fast, easy, and reliable media downloads from your favorite social media platforms.
+  <p align="center">Effortlessly download videos, photos, and stories from  Instagram, Facebook, and Twitter. Enjoy fast, easy, and reliable media downloads from your favorite social media platforms.
 </p>
 </div>
     <a href="https://ALLinOneSaver.vercel.app/"><strong>View Demo »</strong></a>
