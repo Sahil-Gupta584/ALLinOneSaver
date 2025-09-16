@@ -12,7 +12,7 @@ async function instagram(videolink) {
     console.log('running instagram');
     try {
         const dataList = await instagramDl(videolink);
-        console.log(dataList);
+        console.log('dataList',dataList);
         return { downloadUrl: dataList[0].download_link };
 
     } catch (error) {
