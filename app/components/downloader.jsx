@@ -4,7 +4,6 @@ import FurtherComp from "./furtherComp";
 import Loader from "./loader";
 
 export default function Downloader(props) {
-    // quantum.register();
     const [inputUrl, setinputUrl] = useState('');
     const [downloadUrl, setDownloadUrl] = useState('');
     const [isLoading, setIsLoading] = useState(false);
