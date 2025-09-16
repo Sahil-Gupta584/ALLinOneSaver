@@ -2,7 +2,7 @@
 import MainPage from "./components/mainPage";
 
 export default function Home(params) {
-  console.log('asas')
+  console.log(paramsaa)
   return (
     <MainPage defaultChecked={'from main page'} />
   )
