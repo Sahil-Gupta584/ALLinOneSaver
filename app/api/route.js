@@ -76,6 +76,23 @@ async function twitter(videolink) {
     }
 }
 
+async function twitter(videolink) {
+    const url = videolink.replace('x.com', 'twitter.com');
+    console.log('in twitter')
+    console.log(url);
+    try {
+        let res = await getTwitterMedia(url, {
+            text: true,
+        });
+        console.log(res);
+        return { downloadUrl: res.media[0].url };
+
+    } catch (error) {
+        console.log(error.message, error, 'from twitter');
+        return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+}
+
 export async function POST(request) {
     try {
         const { inputUrl } = await request.json();
