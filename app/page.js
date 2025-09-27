@@ -2,8 +2,7 @@
 import MainPage from "./components/mainPage";
 
 export default function Home(para) {
-  console.log(pap
   return (
-    <MainPage defaultChecked={'from main page'} 
+    <MainPage defaultChecked={'from main page'} />
   )
 }  
