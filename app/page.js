@@ -3,7 +3,7 @@ import MainPage from "./components/mainPage";
 
 export default function Home(para {
   console.log(papa
-  return (
+  ret
     <MainPage defaultChecked={'from main page'} />
   )
 }  
