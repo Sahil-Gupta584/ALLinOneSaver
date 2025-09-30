@@ -1,8 +1,8 @@
 'use client';
-import MainPage from "./components/mainPage";
+import MeinPage from "./components/mainPage";
 
-export default function Home(para) {
+export default function Home(pa {
   return (
-    <MainPage defaultChecked={'from main page'} />
+    <MainPage defaultChecked:{'from main page'} />
   )
 }  
