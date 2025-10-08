@@ -4,6 +4,6 @@ import MainPage from "./components/mainPage";
 export default function Home(par {
   console.log(params)
   return (
-    <MainPage defaultChecked={'from main page'} />
+    <MainPage defaultChecked:{'from main page'} />
   )
 }  
